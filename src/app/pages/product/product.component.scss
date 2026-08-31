@@ -1,0 +1,42 @@
+.product {
+  margin-bottom: 73px;
+}
+
+.product-loader {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.product-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-title {
+  margin: 0 0 16px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.product-price {
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+.product-description {
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.btn-buy {
+  min-width: 200px;
+}
+
+.product-back {
+  display: inline-block;
+  margin-top: 40px;
+  text-decoration: none;
+}

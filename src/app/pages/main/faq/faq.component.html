@@ -1,0 +1,18 @@
+<section class="faq">
+  <h2 class="faq-header">Ответы на часто задаваемые вопросы</h2>
+
+  <div class="accordion-wrap">
+    <div class="faq-item mb-3" *ngFor="let item of faqItems" [class.active]="item.isOpen">
+      <button class="faq-question" (click)="toggle(item)">
+        {{ item.question }}
+      </button>
+      <div class="faq-answer accordion-answer_font">
+        <div class="faq-answer-inner">
+          <div class="faq-answer-content">
+            {{ item.answer }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+<div *ngIf="isLoading" class="product-loader">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Загрузка…</span>
+  </div>
+</div>
+
+<div *ngIf="errorMessage" class="alert alert-danger" role="alert">{{ errorMessage }}</div>
+
+<div *ngIf="isNotFound" class="alert alert-warning" role="alert">
+  Такого товара нет. <a routerLink="/catalog" class="alert-link">Вернуться в каталог</a>
+</div>
+
+<section class="product" *ngIf="product">
+  <div class="row g-5 align-items-start">
+
+    <div class="col-lg-6">
+      <img [src]="product.image" [alt]="product.title" class="img-fluid rounded product-image">
+    </div>
+
+    <div class="col-lg-6">
+      <h1 class="product-title">{{ product.title }}</h1>
+      <div class="product-price">{{ product.price }} ₽</div>
+      <p class="product-description">{{ product.description }}</p>
+
+      <button type="button" class="btn btn-primary btn-lg btn-buy hvr-back-pulse" (click)="buy()">
+        Купить
+      </button>
+    </div>
+
+  </div>
+
+  <a routerLink="/catalog" class="product-back">← Назад в каталог</a>
+</section>

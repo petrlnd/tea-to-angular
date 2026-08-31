@@ -1,0 +1,41 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.card {
+  width: 100% !important;
+  --bs-card-border-radius: 4px;
+}
+
+.card-img-top {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.card-body {
+  --bs-card-spacer-y: 20px;
+  --bs-card-spacer-x: 24px;
+}
+
+.card-title {
+  margin-bottom: 12px;
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.card-price {
+  margin-bottom: 26px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.btn-card {
+  width: 170px;
+}

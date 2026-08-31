@@ -1,0 +1,14 @@
+<div class="popup-overlay" (click)="close()">
+
+  <div class="popup animate__animated animate__zoomIn"
+       (click)="$event.stopPropagation()"
+       role="dialog" aria-modal="true" aria-labelledby="popup-text">
+
+    <button type="button" class="btn-close popup-close" aria-label="Закрыть" (click)="close()"></button>
+
+    <p id="popup-text" class="popup-text">Посмотрите наши чайные коллекции</p>
+
+    <a routerLink="/catalog" class="btn btn-primary hvr-back-pulse">Смотреть</a>
+  </div>
+
+</div>

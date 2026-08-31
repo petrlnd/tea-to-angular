@@ -1,0 +1,37 @@
+.order {
+  margin-bottom: 48px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.order-title {
+  margin-bottom: 60px;
+}
+
+#order-form {
+  max-width: 636px;
+  margin: 0 auto;
+}
+
+.order-form__sent {
+  width: 100%;
+  padding: 120px 0;
+  font-size: 32px;
+  text-align: center;
+  margin: 0 auto;
+  color: #000;
+}
+
+.order-form__footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.order-form__error {
+  color: #dc3545;
+}
+
+.btn-order {
+  min-width: 156px;
+}

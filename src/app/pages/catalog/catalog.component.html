@@ -1,0 +1,22 @@
+<section class="catalog">
+  <h1 class="visually-hidden">Чайная компания</h1>
+  <h2 class="catalog-header">{{ title }}</h2>
+
+  <div *ngIf="isLoading" class="catalog-loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Загрузка…</span>
+    </div>
+  </div>
+
+  <div *ngIf="errorMessage" class="alert alert-danger" role="alert">{{ errorMessage }}</div>
+
+  <ng-container *ngIf="!isLoading && !errorMessage">
+    <div *ngIf="products.length === 0" class="catalog-empty">Ничего не найдено</div>
+
+    <div *ngIf="products.length" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 gy-4">
+      <div class="col animate__animated animate__zoomIn" *ngFor="let product of products">
+        <app-product-card [product]="product"></app-product-card>
+      </div>
+    </div>
+  </ng-container>
+</section>
