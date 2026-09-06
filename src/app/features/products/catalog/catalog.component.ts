@@ -2,9 +2,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Observable, of, Subscription } from 'rxjs';
 import { catchError, switchMap, tap } from 'rxjs/operators';
 
-import { ProductService } from '../../common/services/product.service';
-import { SearchService } from '../../common/services/search.service';
-import { ProductType } from '../../common/types/product.type';
+import { ProductService } from '../../../shared/services/product.service';
+import { SearchService } from '../../../shared/services/search.service';
+import { ProductType } from '../../../shared/types/product.type';
 
 @Component({
   selector: 'app-catalog',

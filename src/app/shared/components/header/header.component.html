@@ -1,22 +1,28 @@
 <header class="header">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" routerLink="/">
+      <a class="navbar-brand" routerLink="/" (click)="isMenuCollapsed = true">
         <img src="assets/images/logo.png" alt="Чайная компания" class="logo" width="43" height="20">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-              aria-label="Toggle navigation">
+
+      <button class="navbar-toggler" type="button"
+              (click)="isMenuCollapsed = !isMenuCollapsed"
+              [attr.aria-expanded]="!isMenuCollapsed"
+              aria-controls="navbarMenu"
+              aria-label="Переключить меню">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+      <div id="navbarMenu" class="navbar-collapse" [(ngbCollapse)]="isMenuCollapsed">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link" routerLink="/" routerLinkActive="active"
-               [routerLinkActiveOptions]="{ exact: true }">Главная</a>
+               [routerLinkActiveOptions]="{ exact: true }"
+               (click)="isMenuCollapsed = true">Главная</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/catalog" routerLinkActive="active">Каталог</a>
+            <a class="nav-link" routerLink="/catalog" routerLinkActive="active"
+               (click)="isMenuCollapsed = true">Каталог</a>
           </li>
         </ul>
 

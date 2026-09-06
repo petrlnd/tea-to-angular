@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
-import { SearchService } from '../services/search.service';
+import { SearchService } from '../../services/search.service';
 
 @Component({
   selector: 'app-header',
@@ -12,6 +12,8 @@ import { SearchService } from '../services/search.service';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   searchControl = new FormControl('');
+
+  isMenuCollapsed = true;
 
   private subscription: Subscription | null = null;
 
@@ -34,6 +36,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     event.preventDefault();
 
     this.searchService.setSearch(this.searchControl.value ?? '');
+    this.isMenuCollapsed = true;
     this.router.navigate(['/catalog']);
   }
 

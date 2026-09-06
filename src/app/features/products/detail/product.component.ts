@@ -3,8 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { switchMap, tap } from 'rxjs/operators';
 
-import { ProductService } from '../../common/services/product.service';
-import { ProductType } from '../../common/types/product.type';
+import { ProductService } from '../../../shared/services/product.service';
+import { ProductType } from '../../../shared/types/product.type';
 
 @Component({
   selector: 'app-product',

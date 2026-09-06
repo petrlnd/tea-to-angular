@@ -1,0 +1,10 @@
+<section class="banner animate__animated animate__backInDown">
+  <ngb-carousel [interval]="5000"
+                [showNavigationArrows]="true"
+                [showNavigationIndicators]="true"
+                [pauseOnHover]="true">
+    <ng-template ngbSlide *ngFor="let banner of banners">
+      <img [src]="banner.image" [alt]="banner.alt" class="d-block w-100">
+    </ng-template>
+  </ngb-carousel>
+</section>

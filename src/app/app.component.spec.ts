@@ -1,15 +1,14 @@
-import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { AppComponent } from './app.component';
+import { SharedModule } from './shared/shared.module';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ RouterTestingModule ],
-      declarations: [ AppComponent ],
-      schemas: [ NO_ERRORS_SCHEMA ]
+      imports: [ SharedModule, RouterTestingModule ],
+      declarations: [ AppComponent ]
     }).compileComponents();
   });
 
@@ -26,5 +25,13 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('app-header')).toBeTruthy();
     expect(compiled.querySelector('router-outlet')).toBeTruthy();
     expect(compiled.querySelector('app-footer')).toBeTruthy();
+  });
+
+  it('should render the header menu from SharedModule', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+
+    const links = (fixture.nativeElement as HTMLElement).querySelectorAll('.navbar-nav .nav-link');
+    expect(links.length).toBe(2);
   });
 });

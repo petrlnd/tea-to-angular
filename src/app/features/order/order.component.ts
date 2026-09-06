@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription, timer } from 'rxjs';
 
-import { OrderService } from '../../common/services/order.service';
+import { OrderService } from '../../shared/services/order.service';
 
 @Component({
   selector: 'app-order',
